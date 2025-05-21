@@ -1,17 +1,15 @@
-.product-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  padding: 1rem;
-}
 :root {
   --red: #FF002E;
+  --yellow: #FFD600;
+  --blue: #0FD4FF;
+  --green: #00FF94;
   --white: #FFFFFF;
   --black: #000000;
   --black-secondary: #000D10;
   --white-secondary: #E7E7E7;
 
   --primary-font: 'Arial';
+  --primary-font-weight: 400;
 }
 
 header {
@@ -26,7 +24,7 @@ header {
         text-align: center;
         font-family: var(--primary-font);
         font-size: 48px;
-        font-weight: 400;
+        font-weight: var(--primary-font-weight);
 
         span {
             display: block;
@@ -53,6 +51,58 @@ header {
         .header-button__light {
             background-color: var(--white);
             color: var(--black);
+        }
+    }
+}
+main {
+    font-family: var(--primary-font);
+    display: flex;
+    flex-direction: column;
+
+    section {
+        margin-top: 20px;
+        article {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .section-one {
+        order: 1;
+        height: 643px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* duas colunas iguais */
+        grid-auto-rows: auto; /* altura automática para as linhas */
+        gap: 10px; /* espaçamento opcional */
+
+        .full-width {
+            grid-column: 1 / -1; /* ocupa as duas colunas */
+        }
+
+        article {
+            background-color: var(--yellow);
+            font-size: 40px;
+            font-weight: var(--primary-font-weight);
+        }
+    }
+    .section-two {
+        order: 0;
+        height: 421px;
+        article {
+            background-color: var(--green);
+            font-size: 64px;
+            font-weight: var(--primary-font-weight);
+            height: 100%;
+        }
+    }
+    .section-three {
+        order: 2;
+        height: 400px;
+        article {
+            background-color: var(--blue);
+            font-size: 64px;
+            font-weight: var(--primary-font-weight);
+            height: 100%;
         }
     }
 }
