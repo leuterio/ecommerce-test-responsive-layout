@@ -4,6 +4,58 @@
   gap: 1rem;
   padding: 1rem;
 }
+:root {
+  --red: #FF002E;
+  --white: #FFFFFF;
+  --black: #000000;
+  --black-secondary: #000D10;
+  --white-secondary: #E7E7E7;
+
+  --primary-font: 'Arial';
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 400px;
+    background-color: var(--red);
+
+    h1 {
+        text-align: center;
+        font-family: var(--primary-font);
+        font-size: 48px;
+        font-weight: 400;
+
+        span {
+            display: block;
+        }
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        button {
+            height: 43px;
+            width: 320px;
+            border-radius: 10px;
+            font-size: 20px;
+            border: none;
+        }
+            
+        .header-button__dark {
+            background-color: var(--black-secondary);
+            color: var(--white-secondary);
+        }
+        .header-button__light {
+            background-color: var(--white);
+            color: var(--black);
+        }
+    }
+}
 
 /* Tablet (768px+) */
 @media (min-width: 768px) {
