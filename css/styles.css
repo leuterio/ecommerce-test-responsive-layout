@@ -88,6 +88,15 @@ header .button-container button {
   color: var(--black);
 }
 
+.header-button__dark:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.header-button__light:hover {
+  background-color: #cdcdcd;
+}
+
 main {
   font-family: var(--primary-font);
   display: flex;
